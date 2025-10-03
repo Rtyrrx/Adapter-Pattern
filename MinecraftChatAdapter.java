@@ -23,8 +23,8 @@ public class MinecraftChatAdapter implements ChatAdapter, Listener {
     @EventHandler
     public void onPlayerChat(AsyncPlayerChatEvent event) {
         if (handler != null) {
-            event.setCancelled(true);
             handler.accept(event.getPlayer().getName() + "» " + event.getMessage());
         }
     }
 }
+
